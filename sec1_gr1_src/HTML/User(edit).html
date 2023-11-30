@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Useredit.css">
+    <title>Building Tools Store</title>
+    <link rel="website icon" type="png" href="https://emojis.wiki/emoji-pics/apple/crown-apple.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>TOP KING <img src="https://images.emojiterra.com/google/android-nougat/512px/1f451.png"></h1>
+            </div>
+            <ul>
+                <li><a href="http://localhost:8021/home">Home</a></li>
+                <li><a href="http://localhost:8021/aboutus">About Us</a></li>
+                <li><a href="http://localhost:8021/Searchpage">Search</a></li>
+                <li><a href="http://localhost:8021/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    
+    <section class="setting">
+        <br>
+        <h2 style="margin-left: 20px;">Setting</h2><hr>
+        <a href="http://localhost:8021/admin-edit" class="hover-effect"> <h4>  Admin Information   </h4> </a> 
+        <a href="http://localhost:8021/admin-product" class="hover-effect"> <h4>  Product             </h4> </a>
+    </section>
+    <section>
+            <div class="search-container">
+                <h3>Admin ID :<input type="text" placeholder="Enter ID" id="aid"></h3>
+            </div>
+            <div class="search-container">
+                <h3>Email :<input type="email" placeholder="Enter Email" id="aemail"></h3>
+            </div>
+            <div class="search-container">
+                <h3>Password :<input type="text" placeholder="Enter Password" id="apwd"></h3>
+            </div>
+            <div class="search-container">
+                <h3>First name :<input type="text" placeholder="Enter First name" id="afname"></h3>
+            </div>
+            <div class="search-container">
+                <h3>Last name :<input type="text" placeholder="Enter Last name" id="alname"></h3>
+            </div>
+            <div class="search-container">
+                <h3>Address :<input type="text" placeholder="Enter Address" id="aaddress"></h3>
+            </div>
+            <div class="search-container">
+                <h3>Age :<input type="text" placeholder="Enter Age" id="aage"></h3>
+            </div>
+            <div class="search-container">
+                <h3>What you need :<input type="text" placeholder="Enter Need" id="aneed"></h3>
+            </div>
+        
+    </section>
+    <section class="but">
+    <button type="button" id="ainsert" value="insert">Insert</button>
+    <button type="button" id="aupdate" value="update">Update</button>
+    <button type="button" id="adelete" value="delete">Delete</button>
+    <button type="button" id="aselect" value="select">Select</button>
+    <button type="button" id="aselectall" value="sellecta">Select all</button>
+    </section>
+    <div id="output"></div>
+    <script src="/CallWs/CallAdminWs.js"></script>
+</main>
+    <footer>
+        <p>TopKing 👑</p><br>
+        <p>Tel: 02-345-6789</p><br>
+        <p> Address: 999 Phutthamonthon Sai 4 Rd, Salaya, Phutthamonthon District, Nakhon Pathom 73170 </p>
+    </footer>
+</body>
+</html>

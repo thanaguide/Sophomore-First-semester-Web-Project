@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- เป็นส่วนที่ลิ้งกับไฟล์ css ทั้งหมดของหน้า -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css" type="text/css">
+    <link rel="stylesheet" href="/css/admin-product.css" type="text/css">
+    <title>Building Tools Store</title>
+    <!-- link เพื่อดึงรูปมงกุฏใส่ใน Title ของเว็บไซต์ -->
+    <link rel="website icon" type="png" href="https://emojis.wiki/emoji-pics/apple/crown-apple.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header><!--ส่วนบนเนื้อหาเว็บ-->
+        <nav><!--ส่วน navigation-->
+            <div class="logo"><!--ลิ้ง logo ของเว็บ-->
+                <h1>TOP KING <img src="..\Picture\1f451.png"></h1>
+            </div>
+            <ul>
+                <li><a href="http://localhost:8021/home">Home</a></li>
+                <li><a href="http://localhost:8021/aboutus">About Us</a></li>
+                <li><a href="http://localhost:8021/Searchpage">Search</a></li>
+                <li><a href="http://localhost:8021/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section class="setting">
+        <br>
+        <h2 style="margin-left: 20px;">Setting</h2><hr>
+        <a href="http://localhost:8021/admin-edit" class="hover-effect"> <h4>  Admin Information  </h4></a> 
+        <a href="http://localhost:8021/admin-product" class="hover-effect"> <h4>  Product    </h4></a>
+    </section>
+    
+    <section>
+        <div class="search-container">
+            <h3>Product ID : <input type="text" placeholder="Enter Product ID" id="pid"></h3>
+        </div>
+        <div class="search-container">
+            <h3>Product Name : <input type="text" placeholder="Enter Product Name" id="pname"></h3>
+        </div>
+            <div class="search-container">
+            <h3>Product Brand : <input type="text" placeholder="Enter Product Brand" id="pbrand"></h3>
+        </div>
+            <div class="search-container">
+            <h3>Product Category : <input type="text" placeholder="Enter Product Category" id="pcat"></h3>
+        </div>
+            <div class="search-container">
+            <h3>Product Price : <input type="text" placeholder="Enter Product Price" id="pprice"></h3>
+        </div>
+            <div class="search-container">
+            <h3>Product Quantity : <input type="text" placeholder="Enter Product Quantity" id="pquan"></h3>
+        </div>
+            <div class="search-container">
+            <h3>Product Details : <input type="text" placeholder="Enter Product Detail" id="pdetail"></h3>
+        </div>
+        <div class="search-container">
+            <h3>Image link : <input type="text" placeholder="Enter Image" id="pimage"></h3>
+        </div>
+    </section>
+    <section class="but">
+        <button type="button" id="pinsert" value="insert">Insert</button>
+        <button type="button" id="pupdate" value="update">Update</button>
+        <button type="button" id="pdelete" value="delete">Delete</button>
+        <button type="button" id="pselect" value="select">Select</button>
+        <button type="button" id="pselectall" value="sellecta">Select all</button>
+    </section>
+    <div id="output"></div>
+    <script src="/CallWs/CallProductWs.js"></script>
+</main>    
+
+    <footer> <!-- footer -->
+        <p>TopKing 👑</p><br>
+        <p>Tel: 02-345-6789</p><br>
+        <p> Address: 999 Phutthamonthon Sai 4 Rd, Salaya, Phutthamonthon District, Nakhon Pathom 73170 </p>
+    </footer>
+</body>
+</html>

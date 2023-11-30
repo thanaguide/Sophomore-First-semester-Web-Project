@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com">
+    <link rel="stylesheet" href="/css/Login.css">
+    <title>Building Tools Store</title>
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav>
+            <!-- ชื่อและ Logo ของบริษัท -->
+            <div class="logo">
+                <h1>TOP KING <img src="https://images.emojiterra.com/google/android-nougat/512px/1f451.png"></h1>
+            </div>
+            <!-- ชื่อและ Logo ของบริษัท -->
+
+            <!-- List เพื่อใช้เชื่อมไปยังหน้าต่างๆบน Navigation Bar -->
+            <ul>
+                <li><a href="http://localhost:8021/home">Home</a></li>
+                <li><a href="http://localhost:8021/aboutus">About Us</a></li>
+                <li><a href="http://localhost:8021/Searchpage">Search</a></li>
+                <li><a href="http://localhost:8021/login">Login</a></li>
+            </ul>
+        </nav>
+        <!-- Navigation bar -->
+    </header>
+
+    <section class="login-main-content">
+        <form> <!--ต้องแก้!!!!-->
+            <div class="inner-box">
+                <h3>Login Here</h3>
+
+                <label for="username">Username</label><!--เป็นการloginโดยใช้email--> 
+                <input type="text" placeholder=" Email" id="username" required>
+            
+                <label for="password">Password</label>
+                <input type="text" placeholder=" Password" id="pwd" required>
+            </div>
+            <div class="outer-box">
+                <button type="button" class="Login" id="login" value="login">Log In</button><!--กำหนดtype submit เพื่อให้เช็คกับตัวusername & password-->
+                <div class="g-signin2" data-onsuccess="onSignIn"></div><!--เป็นการloginด้วยgoogle--> 
+            </div>
+        </form>
+    </section>
+    <script src="/CallWs/CallLoginWS.js"></script>
+    <footer>
+        <section class="login-footer">
+        <p>TopKing 👑</p><br>
+        <p>Tel: 02-345-6789</p><br>
+        <p> Address: 999 Phutthamonthon Sai 4 Rd, Salaya, Phutthamonthon District, Nakhon Pathom 73170 </p>
+        </section>
+    </footer>
+</body>
+</html>

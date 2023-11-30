@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <!--สั่งให้เว็บบราวเซอร์แสดงเนื้อหาโดยใช้การเข้ารหัส UTF-8 ซึ่งเป็นการเข้ารหัสที่สามารถแสดงอักขระจากหลายภาษา ในกรณีนี้จะทำให้เว็บบราวเซอร์แสดงเนื้อหาตามที่ผู้พัฒนาเว็บต้องการได้ -->
+    <meta charset="UTF-8">
+    <!--ตั้งค่าการซูมเริ่มต้นให้เป็น 1.0 นี้ส่งผลให้เว็บไซต์ทำงานได้ดีบนอุปกรณ์ทั้งหมดและให้ผู้ใช้ประสบการณ์ที่ดีมากขึ้น -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/him-styles.css">
+    <title></title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- ชื่อและ Logo ของบริษัท -->
+            <div class="logo">
+                <!-- link เพื่อดึงรูปมงกุฏใส่ใน Title ของเว็บไซต์ -->
+                <h1>TOP KING <img src="https://images.emojiterra.com/google/android-nougat/512px/1f451.png"></h1>
+            </div>
+            <ul class="spul">
+                <li><a href="http://localhost:8021/home">Home</a></li>
+                <li><a href="http://localhost:8021/aboutus">About Us</a></li>
+                <li><a href="http://localhost:8021/Searchpage">Search</a></li>
+                <li><a href="http://localhost:8021/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- พื้นที่สำหรับหัวข้อรายการสำคัญของสินค้าและรายละเอียดของสินค้าที่จะแสดงหลัง -->
+
+    <!-- JS script ฟังก์ชัน สำหรับการสร้าง Dynamic Page โดยรับ HTML element มาจาก localStorage ที่มาจากฟังก์ชัน buyButton.onclick บน CallSearchWs.js-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        // กำหนดตัวแปรที่รับมาจาก localStorage 
+        var productPageContent = localStorage.getItem('productPageContent');
+
+        // เงื่อนไขเช็คว่า productPageContent มีอยู่หรือไม่
+        if (productPageContent) {
+        
+            //สร้าง Container ไว้ใส่ Element
+            var container = document.createElement('div'); 
+            container.innerHTML = productPageContent;
+
+            // นำ Element Container ที่สร้างมาใส่เข้าไปใน document.body 
+            document.body.appendChild(container);
+        }
+
+        // ลบออกจาก localStorage ทุกครั้ง เพื่อหลีกเลี่ยงกด Reload Page แล้วมีการใส่ HTML Element ซ้ำ
+        localStorage.removeItem('productPageContent');
+    });
+    </script>
+    
+    <!-- ส่วนของ Footer -->
+</body>
+
+</html>
